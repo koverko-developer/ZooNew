@@ -15,6 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.example.mobiapp.zoonew.adapters.RecyclerViewAdapter;
 import com.example.mobiapp.zoonew.classes.Product;
@@ -127,5 +128,10 @@ public class MainActivity extends AppCompatActivity
 
         RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, list);
         recyclerView.setAdapter(adapter);
+    }
+
+    public void startInfoProduct(int position){
+        Toast.makeText(this, "Clicked Country Position = " + position, Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, InfoProductActivity.class));
     }
 }

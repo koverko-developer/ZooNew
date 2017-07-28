@@ -7,4 +7,6 @@
     <color name="ym_background">#FAFAFA</color>
     <color name="white">#FFF</color>
     <color name="green">#1ec144</color>
+    <color name="blacks">#333333</color>
+    <color name="border">#e7e8e8</color>
 </resources>

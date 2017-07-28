@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.mobiapp.zoonew.MainActivity;
 import com.example.mobiapp.zoonew.R;
 import com.example.mobiapp.zoonew.classes.Product;
 import com.example.mobiapp.zoonew.classes.RecomendedProduct;
@@ -22,9 +23,9 @@ import java.util.List;
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolders> {
 
     private List<RecomendedProductHour> itemList;
-    private Context context;
+    private MainActivity context;
 
-    public RecyclerViewAdapter(Context context, List<RecomendedProductHour> itemList) {
+    public RecyclerViewAdapter(MainActivity context, List<RecomendedProductHour> itemList) {
         this.itemList = itemList;
         this.context = context;
     }
@@ -33,7 +34,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder
     public RecyclerViewHolders onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View layoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_card_shop, null);
-        RecyclerViewHolders rcv = new RecyclerViewHolders(layoutView);
+        RecyclerViewHolders rcv = new RecyclerViewHolders(layoutView, context);
         return rcv;
     }
 
